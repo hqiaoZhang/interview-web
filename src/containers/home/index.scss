@@ -1,0 +1,24 @@
+.home {
+  width: 50%;
+  margin: 16px auto;
+  h2 {
+    margin: 8px 0;
+  }
+  ul {
+    padding-left: 16px;
+    li {
+      list-style: auto;
+      padding-left: 8px;
+    }
+    h3 {
+      cursor: pointer;
+    }
+    h3:hover + p {
+      display: block;
+    }
+    p {
+      display: none;
+      opacity: 0.95;
+    }
+  }
+}

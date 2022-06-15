@@ -1,0 +1,161 @@
+.header {
+  width: 100%;
+  height:  $headerH;
+  //background:$headerColor;
+  background: url("./images/cdl_bg@2x.png") no-repeat;
+  background-size: 100% 100%;
+  line-height:0.65rem;
+  color: #fff;
+  padding: 0 8px;
+  font-size: 16px;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+    justify-content: space-between;
+  .right-select {
+    float: right;
+    margin-right: 6px;
+  }
+  .logo {
+    // background: url("./images/logo@2x.png") no-repeat;
+    background-size: 100% 100%;
+    // width: 186px;
+    width: 2.8rem;
+    height: 48px;
+    margin-top: 8px;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.user_name {
+  float: left;
+  margin-right: 15px;
+  i.iconfont {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+}
+
+
+// app下载
+.download_app {
+  float: left;
+  color: #FFFFFF;
+  position: relative;
+  height: $headerH;
+  line-height: $headerH;
+  width: 55px;
+  cursor: pointer;
+  span {
+    position: absolute;
+    cursor: pointer;
+    background: url(images/app-icon.png) no-repeat center;
+    margin-left: 4px;
+    width: 24px;
+    height: 24px;
+    top: 19px;
+    background-size: 100% 100%;
+  }
+  .code_box {
+    border-radius: 3px;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    border: none;
+    top: 50px;
+    left: -103px;
+    border-radius: 6px;
+    padding-bottom: 5px;
+    display: none;
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 6px solid rgba(53, 119, 205, 0);
+      border-right: 6px solid rgba(53, 119, 205, 0);
+      border-bottom: 6px solid #fff;
+      position: absolute;
+      top: -6px;
+      left: 50%;
+    }
+    .qr_code {
+      width: 248px;
+      height: 224px;
+      .code_img {
+        width: 200px;
+        height: 200px;
+        margin: 24px 0 0 24px;
+        background: #fff;
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #1D84EF;
+      }
+      .text {
+        float: left;
+        width: 100%;
+        color: #000;
+        text-align: center;
+        font-size: 16px;
+        height: 32px;
+        line-height: 32px;
+      }
+    }
+  }
+  &:hover .code_box{
+    display: block;
+  }
+}
+
+.top_menus {
+  float: left;
+  font-size: 16px;
+  i  {
+    padding-right: 0px;
+    font-size: 16px;
+  }
+  a {
+    padding: 0 15px;
+    display: inline-block;
+    text-decoration: none !important;
+    @include font_color('fontWhite');
+    &:hover {
+      @include font_color('hlColor');
+    }
+    &.active {
+      position: relative;
+      @include font_color('hlColor');
+      .iconfont {
+        background-image: linear-gradient(180deg,#ffffff, #00bbff);
+        //box-shadow: 0px 1px 2px 0px rgba(0,187,255,0.45), 0px 0px 1px 0px rgba(0,187,255,0.45) inset;
+        background-clip:text;
+        -webkit-background-clip:text;
+        color: transparent;
+      }
+    }
+    //&.active:before {
+    //  content: " ";
+    //  position: absolute;
+    //  //width: 100%;
+    //  height: 14px;
+    //  bottom: 0.0rem;
+    //  left: 0px;
+    //  right: 0px;
+    //  opacity: 0.45;
+    //  background: linear-gradient(180deg,rgba(0,46,95,0.00), #00bbff);
+    //}
+    //&.active:after {
+    //  content: " ";
+    //  position: absolute;
+    //  bottom: 0.02rem;
+    //  left: 48%;
+    //  width: 0;
+    //  height: 0;
+    //  border-left: 0.06rem solid transparent;
+    //  border-right: 0.06rem solid transparent;
+    //  border-bottom: 0.03rem solid #2AF3FF;
+    //}
+  }
+}

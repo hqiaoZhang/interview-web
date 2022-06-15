@@ -1,0 +1,83 @@
+.area_menu {
+  float: left;
+  font-size: 14px;
+  color: #535353;
+  position: relative;
+  //height: 64px;
+  //line-height: 64px;
+  // padding: 0 15px;
+  margin-right: 0.22rem;
+  margin-top: 0.03rem;
+  p {
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    height: 32px;
+    border: 1px solid;
+    line-height: 32px;
+    padding: 0 10px;
+    border-radius: 2px;
+    display: inline-block;
+    @include border_color('inputBor');
+  }
+  .icon-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid rgba(255, 255, 255, 0);
+    border-right: 5px solid rgba(255, 255, 255, 0);
+    border-top: 5px solid #fff;
+    margin-left: 12px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .area_list {
+    width: 95px;
+    position: absolute;
+    right: 23px;
+    border-radius: 3px;
+    top: 54px;
+    z-index: 99;
+    display: block;
+    padding: 5px 0;
+    border: 1px solid;
+    @include background_color('sideBg');
+    @include font_color('fontWhite');
+    @include border_color('bor0777dd45');
+    li {
+      height: 28px;
+      line-height: 28px;
+      padding: 0 20px;
+      cursor: pointer;
+      &:first-child::before {
+        content: '';
+        position: absolute;
+        right: 6px;
+        top: -6px;
+        width: 0;
+        height: 0;
+        border-left: 6px solid rgba(255, 255, 255, 0);
+        border-right: 6px solid rgba(255, 255, 255, 0);
+        border-bottom: 6px solid #fff;
+      }
+    }
+    li {
+      &:hover {
+        background: rgba($color: #1D84EF, $alpha: 0.1);
+        color: #1D84EF;
+      }
+
+    }
+
+  }
+}
+
+
+@media screen and (max-height: 768px){
+  .area-menu .area_list {
+    max-height: 500px;
+    overflow-y: auto;
+    li {
+      padding: 7px 16px;
+    }
+  }
+}
