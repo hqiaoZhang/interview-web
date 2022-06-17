@@ -4,13 +4,12 @@
  * @Date: 2018-06-10 15:17:04 
  * @Description: 数据出口主文件
  * @Last Modified by: zhanghongqiao
- * @Last Modified time: 2018-11-28 17:07:24
+ * @Last Modified time: 2022-06-15 09:00:29
  */
 
 import Vue from 'vue'
 import Vuex from 'vuex'
 import createLogger from 'vuex/dist/logger'
-import * as common from './common' // 公用
  
  
 const debug = process.env.NODE_ENV !== 'production'
@@ -31,7 +30,6 @@ const debug = process.env.NODE_ENV !== 'production'
 Vue.use(Vuex)
  
 const modules = {
-  common
 }
  
 // 注册Store
